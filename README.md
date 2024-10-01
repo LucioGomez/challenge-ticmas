@@ -1,11 +1,3 @@
-API de Gestión de Tareas
-Este proyecto es una API RESTful construida con Node.js y Express.js que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) sobre el recurso Tareas. La API también incluye funcionalidades adicionales como la gestión de estados de tareas y el cálculo del tiempo transcurrido desde la creación de cada tarea.
-
-Requisitos Previos
-Node.js v12 o superior
-MySQL u otro motor de base de datos SQL compatible
-Postman o cualquier cliente HTTP para probar los endpoints
-
 *En el archivo database.js, encontrarás la configuración de la conexión a la base de datos. Es importante que actualices los valores de la base de datos, usuario, contraseña, host y puerto según tu entorno local o el servidor donde implementes el proyecto. A continuación se muestra un ejemplo de cómo se configura la conexión utilizando Sequelize:*
 
 const sequelize = new Sequelize("tasks", "root", "root", {
@@ -45,6 +37,7 @@ PUT	/api/task/:idTask/change/:idStatus	Cambiar el estado de una tarea
 GET	/api/task/times/:id	Obtener el número de días transcurridos desde la creación de una tarea
 
 Estados
+
 POST	/api/status	Crear un nuevo estado
 
 GET	/api/statuses	Obtener todos los estados disponibles
